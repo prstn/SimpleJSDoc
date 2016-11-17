@@ -41,7 +41,7 @@ function search(inSearch){
   var words = decodeURI(inSearch).split(/[\s\.#]/);
 
   var keys = Object.keys(searchMap);
-  
+
   words.forEach(function (word, iWord) {
     for (var key of keys) {
       var reg = new RegExp(word, 'i');
@@ -143,26 +143,26 @@ $(document).ready(function () {
   });
 
   //Smooth display change and scrolling
-  $('nav ul>li>a').click(function(e){
-    e.preventDefault();
-    var searchParam = currSearch ? '?search='+currSearch:'';
-    var href = $(e.target).closest('a').attr("href");
-    var selector = href.match(/#[\w\.]+/i);
-    if(locationHref.match(/[\w\.]+.html/i)[0]!=href.match(/[\w\.]+.html/i)[0]){
-      $res.siblings('ul.methods').hide(300);
-      $('#main').fadeOut(400, function() {
-        if(selector)
-          window.location.href = href.replace(/#[\w\.]+/i,searchParam+selector);
-        else window.location.href = href+searchParam;
-      });
-    } else if(selector){
-      //escape dot char
-      selector = selector[0].replace('.','\\.');
-      $body.animate({scrollTop:$(selector).offset().top}, 300,function () {
-        window.location.href = href.replace(/#[\w\.]+/i,searchParam+selector);
-      });
-    } else {
-      window.location.href = href+searchParam;
-    }
-  });
+  // $('nav ul>li>a').click(function(e){
+  //   e.preventDefault();
+  //   var searchParam = currSearch ? '?search='+currSearch:'';
+  //   var href = $(e.target).closest('a').attr("href");
+  //   var selector = href.match(/#[\w\.]+/i);
+  //   if(locationHref.match(/[\w\.]+.html/i)[0]!=href.match(/[\w\.]+.html/i)[0]){
+  //     $res.siblings('ul.methods').hide(300);
+  //     $('#main').fadeOut(400, function() {
+  //       if(selector)
+  //         window.location.href = href.replace(/#[\w\.]+/i,searchParam+selector);
+  //       else window.location.href = href+searchParam;
+  //     });
+  //   } else if(selector){
+  //     //escape dot char
+  //     selector = selector[0].replace('.','\\.');
+  //     $body.animate({scrollTop:$(selector).offset().top}, 300,function () {
+  //       window.location.href = href.replace(/#[\w\.]+/i,searchParam+selector);
+  //     });
+  //   } else {
+  //     window.location.href = href+searchParam;
+  //   }
+  // });
 });

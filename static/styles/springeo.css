@@ -16,9 +16,6 @@ nav .ancestor{
   display: inline-block;
 }
 
-#main{
-  animation: fadeIn 200ms;
-}
 
 #search{
   margin-top: 10px;
