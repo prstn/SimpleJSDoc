@@ -19,7 +19,7 @@ A clean, responsive documentation template theme for JSDoc 3.
 ## Install
 
 ```bash
-$ npm install --save-dev smooth-jsdoc
+$ npm install --save-dev simple-jsdoc
 ```
 
 ## Usage
