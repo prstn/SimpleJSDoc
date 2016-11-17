@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/remy199210/SmoothJSDoc.git"
+    "url": "https://github.com/prstn/SimpleJSDoc.git"
   },
-  "author": "Preston Mitcham, Rémy Drouet <contact@remy-drouet.fr>",
+  "author": "Preston Mitcham",
   "licenses": [{
     "type": "Apache-2.0",
     "url": "http://www.apache.org/licenses/LICENSE-2.0"
